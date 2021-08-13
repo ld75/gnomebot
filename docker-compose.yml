@@ -1,0 +1,42 @@
+version: "3.3"
+services:
+  nginx:
+    image: nginx:1.19.0
+    container_name: nginxgnome
+    depends_on:
+      - pm2gnome
+    links:
+      - pm2gnome:localhost
+    ports:
+      - 443:443
+    volumes:
+      - type: bind
+        source: /media/laurent/OUGARIT/Mesdocuments/developpement/creations/gnomebot/nginxconf
+        target: /etc/nginx/conf.d
+      - type: bind
+        source: /media/laurent/OUGARIT/Mesdocuments/developpement/creations/gnomebot/ssl
+        target: /etc/nginx/ssl
+      - type: bind
+        source: /media/laurent/OUGARIT/Mesdocuments/developpement/creations/gnomebot/ssl/well-known/acme-challenge
+        target: /var/.well-known/acme-challenge
+  pm2gnome:
+    image: keymetrics/pm2:latest-alpine
+    container_name: pm2gnome
+    ports:
+      - 8080:8080
+    command: pm2-runtime ecosystem.config.js
+    volumes:
+      - type: bind
+        source: /media/laurent/OUGARIT/Mesdocuments/developpement/creations/gnomebot/src
+        target: /src
+      - type: bind
+        source: /media/laurent/OUGARIT/Mesdocuments/developpement/creations/gnomebot/pm2.json
+        target: /pm2.json
+      - type: bind
+        source: /media/laurent/OUGARIT/Mesdocuments/developpement/creations/gnomebot/ecosystem.config.js
+        target: /ecosystem.config.js
+      - type: bind
+        source: /media/laurent/OUGARIT/Mesdocuments/developpement/creations/gnomebot/src/manifest.json
+        target: /manifest.json
+
+

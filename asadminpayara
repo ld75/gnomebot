@@ -1,1 +1,0 @@
-set configs.config.server-config.network-config.protocols.protocol.${protocol-name}.ssl.hsts-enabled=true
