@@ -1,0 +1,9 @@
+{
+"name": "gnomebot",
+"version": "1.0.0",
+"author": "",
+"license": "ISC",
+  "scripts": {
+    "test":"jest"
+   }
+}

@@ -2,7 +2,11 @@
 
 ## quick install
 
-1. je fais comment ?
+se placer sous /gnomebot
+executer: 
+    docker-compose up
+    ou
+    ./start.sh
 
 ## Usage
 

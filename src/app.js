@@ -1,11 +1,12 @@
+//import {Service} from './js/service.js'
 const http=require('http')
 const port = 8080
 const fs=require('fs');
 
 const server= http.createServer(function(request, response){
     console.log("reception requete"+request.url)
-    //if (request.url=="/manifest.json") renderManifest(reponse);
-        //else
+    let service = new Service();
+    service.consoler();
             renderIndex(response)
     //  sendHelloWorld(response);
 })
@@ -21,6 +22,7 @@ server.listen(port,function(error){
 })
 
 function outputFile(res, filePath) {
+    console.log("raaaaaaaaaaa")
     res.writeHead(200, {"Content-Type": "text/html"});
     fs.readFile(filePath, function (error, data) {
         if (error) {
