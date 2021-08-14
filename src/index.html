@@ -4,10 +4,15 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#009688">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/service-worker-init.js"></script>
+    <script src="./service-worker-init.js"></script>
+    <script type="module">
+        import {FrontDisplayer} from "./js/front/FrontDisplayer.js";
+        window.frontDisplayer=FrontDisplayer;
+    </script>
 </head>
 <body>
-
+<input type="button" onclick ="frontDisplayer.displayAddGnome()"/>aaaaaaaaaaaaaaaa
 hello index
+<div id="app"></div>
 </body>
 </html>

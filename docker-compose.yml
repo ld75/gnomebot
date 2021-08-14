@@ -11,13 +11,13 @@ services:
       - 443:443
     volumes:
       - type: bind
-        source: /media/laurent/OUGARIT/Mesdocuments/developpement/creations/gnomebot/nginxconf
+        source: /home/laurent/Documents/gnomebot/gnomebot/nginxconf
         target: /etc/nginx/conf.d
       - type: bind
-        source: /media/laurent/OUGARIT/Mesdocuments/developpement/creations/gnomebot/ssl
+        source: /home/laurent/Documents/gnomebot/gnomebot/ssl
         target: /etc/nginx/ssl
       - type: bind
-        source: /media/laurent/OUGARIT/Mesdocuments/developpement/creations/gnomebot/ssl/well-known/acme-challenge
+        source: /home/laurent/Documents/gnomebot/gnomebot/ssl/well-known/acme-challenge
         target: /var/.well-known/acme-challenge
   pm2gnome:
     image: keymetrics/pm2:latest-alpine
@@ -27,16 +27,16 @@ services:
     command: pm2-runtime ecosystem.config.js
     volumes:
       - type: bind
-        source: /media/laurent/OUGARIT/Mesdocuments/developpement/creations/gnomebot/src
+        source: /home/laurent/Documents/gnomebot/gnomebot/src
         target: /src
       - type: bind
-        source: /media/laurent/OUGARIT/Mesdocuments/developpement/creations/gnomebot/pm2.json
+        source: /home/laurent/Documents/gnomebot/gnomebot/pm2.json
         target: /pm2.json
       - type: bind
-        source: /media/laurent/OUGARIT/Mesdocuments/developpement/creations/gnomebot/ecosystem.config.js
+        source: /home/laurent/Documents/gnomebot/gnomebot/ecosystem.config.js
         target: /ecosystem.config.js
       - type: bind
-        source: /media/laurent/OUGARIT/Mesdocuments/developpement/creations/gnomebot/src/manifest.json
+        source: /home/laurent/Documents/gnomebot/gnomebot/src/manifest.json
         target: /manifest.json
 
 
