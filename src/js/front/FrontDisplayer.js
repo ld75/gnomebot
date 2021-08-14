@@ -1,4 +1,4 @@
-import {AddGnomePannel} from "./AddGnomePannel.js";
+import {AddGnomePannel} from "./webcomponents/AddGnomePannel.js";
 
 export var FrontDisplayer= {
     displayAddGnome() {

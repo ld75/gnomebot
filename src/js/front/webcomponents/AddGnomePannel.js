@@ -7,7 +7,10 @@ export class AddGnomePannel extends HTMLElement{
         <div><span>Ajouter un gnome</span><br>
         <table>
         <tr><td><input type="radio" value="fixe" name="mobilite"></td><td>Gnome fixe</td></tr>
-        <tr><td><input type="radio" value="mobile" name="mobilite"></td><td>Gnome mobile</td></tr>          
+        <tr><td><input type="radio" value="mobile" name="mobilite"></td><td>Gnome mobile</td></tr>
+        <tr><td colspan="2">Commentaires</td> </tr>          
+        <tr><td colspan="2"><input type="textarea" name="commentaires"></td> </tr>          
+        <tr><td colspan="2"><input type="button" value="Valider"></td> </tr>          
           </table>
         
         </div>
