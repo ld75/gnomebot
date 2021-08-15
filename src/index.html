@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    <link rel="icon" type="image/png" sizes="512x512" href="gnomebot.png"/>
+    <link rel="icon" type="image/png" sizes="512x512" href="./front/img/gnomebot.png"/>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#009688">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./service-worker-init.js"></script>
     <script type="module">
-        import {FrontDisplayer} from "./js/front/FrontDisplayer.js";
+        import {FrontDisplayer} from "./front/FrontDisplayer.js";
         window.frontDisplayer=FrontDisplayer;
     </script>
 </head>

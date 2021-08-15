@@ -1,3 +1,3 @@
-export var status={
+var status={
     gnomeList:[]
  }

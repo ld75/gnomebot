@@ -1,3 +1,4 @@
+
  {
             "name":"gnomebot",
             "short_name": "gnomebot",
@@ -9,13 +10,13 @@
             "background_color":"#009588",
             "icons":[
               {
-                  "src":"gnomebot.png",
+                  "src":"front/img/gnomebot.png",
                   "sizes":"512x512",
                   "type":"image/png"
               }
               ,
               {
-                "src":"gnomebot.png",
+                "src":"front/img/gnomebot.png",
                 "sizes":"512x512",
                 "type":"image/png"
               }

@@ -1,4 +1,5 @@
 {
+
   "name": "gnomebot",
   "version": "1.0.0",
   "author": "",
@@ -13,7 +14,8 @@
     "jest": "^27.0.6"
   },
   "dependencies": {
-    "document-register-element": "^1.14.10"
+    "document-register-element": "^1.14.10",
+    "express": "^4.17.1"
   },
   "jest": {
     "setupFiles": [
@@ -21,4 +23,3 @@
     ]
   }
 }
-

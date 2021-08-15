@@ -24,7 +24,7 @@ services:
     container_name: pm2gnome
     ports:
       - 8080:8080
-    command: pm2-runtime ecosystem.config.js
+    command: pm2-runtime /src/app.js
     volumes:
       - type: bind
         source: ./src
@@ -33,10 +33,13 @@ services:
         source: ./pm2.json
         target: /pm2.json
       - type: bind
-        source: ./ecosystem.config.js
-        target: /ecosystem.config.js
-      - type: bind
         source: ./src/manifest.json
         target: /manifest.json
+      - type: bind
+        source: ./package.json
+        target: /package.json
+      - type: bind
+        source: ./node_modules
+        target: /node_modules
 
 

@@ -1,0 +1,9 @@
+module.exports = {
+    app:[{
+        name : "app",
+        instances: 1,
+        script: "./src/app.js",
+        cron_restart: '0 0 * * *'
+    }],
+    script: "serve"
+}

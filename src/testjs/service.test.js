@@ -7,7 +7,7 @@ it('positionGpsNonDisponible_ajouterUnGnome_ThrowErreur', function () {
     let positiongps=undefined
     let gnome = new Gnome();
     gnome.setPositionGps(positiongps);
-    expect(()=>service.ajouterUnGnome(gnome)).toThrow(Error);
+    expect(()=>service.addAGnome(gnome)).toThrow(Error);
 
 });
 it('positionGpsDisponible_ajouterUnGnome_ajouteLeGnome', function () {
@@ -15,6 +15,6 @@ it('positionGpsDisponible_ajouterUnGnome_ajouteLeGnome', function () {
     let positiongps="123456.123456"
     let gnome = new Gnome();
     gnome.setPositionGps(positiongps);
-    service.ajouterUnGnome(gnome);
+    service.addAGnome(gnome);
     expect(status.gnomeList.length).toEqual(1)
 });
