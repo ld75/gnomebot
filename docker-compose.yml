@@ -11,13 +11,13 @@ services:
       - 443:443
     volumes:
       - type: bind
-        source: /home/laurent/Documents/gnomebot/gnomebot/nginxconf
+        source: ./nginxconf
         target: /etc/nginx/conf.d
       - type: bind
-        source: /home/laurent/Documents/gnomebot/gnomebot/ssl
+        source: ./ssl
         target: /etc/nginx/ssl
       - type: bind
-        source: /home/laurent/Documents/gnomebot/gnomebot/ssl/well-known/acme-challenge
+        source: ./ssl/well-known/acme-challenge
         target: /var/.well-known/acme-challenge
   pm2gnome:
     image: keymetrics/pm2:latest-alpine
@@ -27,16 +27,16 @@ services:
     command: pm2-runtime ecosystem.config.js
     volumes:
       - type: bind
-        source: /home/laurent/Documents/gnomebot/gnomebot/src
+        source: ./src
         target: /src
       - type: bind
-        source: /home/laurent/Documents/gnomebot/gnomebot/pm2.json
+        source: ./pm2.json
         target: /pm2.json
       - type: bind
-        source: /home/laurent/Documents/gnomebot/gnomebot/ecosystem.config.js
+        source: ./ecosystem.config.js
         target: /ecosystem.config.js
       - type: bind
-        source: /home/laurent/Documents/gnomebot/gnomebot/src/manifest.json
+        source: ./src/manifest.json
         target: /manifest.json
 
 
