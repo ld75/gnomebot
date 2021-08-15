@@ -1,6 +1,6 @@
 import {Service} from "../back/service.js"
 import {status} from "../back/status.js"
-import {Gnome} from "../front/gnome.js"
+import {Gnome} from "../beans/gnome.js"
 
 it('positionGpsNonDisponible_ajouterUnGnome_ThrowErreur', function () {
     let service = new Service();

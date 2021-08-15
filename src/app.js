@@ -3,12 +3,13 @@ const http=require('http')
 const port = 8080
 const fs=require('fs');
 
+
 const server= http.createServer(function(request, response){
     console.log("reception requete"+request.url)
     let service = new Service();
-    service.consoler();
-            renderIndex(response)
-    //  sendHelloWorld(response);
+    if(request.url=="/") renderIndex(response)
+    else if (request.url=="/addgnome") addgnome(request,response)
+    else if (request.url=="/hello")  sendHelloWorld(response);
 })
 
 server.listen(port,function(error){
@@ -46,4 +47,9 @@ function renderManifest(reponse) {
 function sendHelloWorld(response) {
     response.write("hello node")
     response.end();
+}
+function addgnome(request, response) {
+    let commentaire = request.getParameter("commentaire")
+    let mobilite=request.getParameter("mobilite")
+    let gps=request.getParameter("gps")
 }
