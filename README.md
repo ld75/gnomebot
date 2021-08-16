@@ -8,6 +8,14 @@ executer:
     ou
     ./start.sh
 
+ou
+
+```
+sudo apt install php7
+php -S localhost:8080 -t src
+```
+
+
 ## Usage
 
 ###  je signal un gnome
