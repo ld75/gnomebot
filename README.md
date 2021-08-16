@@ -20,8 +20,8 @@ add gnome | list gnome
 
 ###  je consulte la liste des gnomes a proximité
 
-list gname | detail 
---| --
+list gname | form | retour 
+--| -- | --
 ![](./docs/100.PNG) | ![](./docs/120.PNG) | ![](./docs/100.PNG)
 je clique sur add | j'ajoute un commentaire | je reviens sur la liste
 
