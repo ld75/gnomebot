@@ -41,3 +41,8 @@ example :
 ## schema
 
 ![sql](./docs/gnomebot.png)
+
+
+## ressource
+
+https://pwa-starter-kit.polymer-project.org/application-testing
