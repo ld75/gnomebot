@@ -12,6 +12,9 @@ executer:
 
 ###  je signal un gnome
 
+    je signal et valide,
+    je revien sur la liste des gnomes a proximités
+
 ![](./docs/110.PNG)
 
 ###  je consulte la liste des gnomes a proximité
