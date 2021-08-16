@@ -15,11 +15,10 @@ executer:
 (1) liste gnome | (2) form | (3) retour 
 --| -- | --
 ![](./docs/100.PNG) | ![](./docs/110.PNG) | ![](./docs/100.PNG)
-je clique sur add | j'ajoute un commentaire | je reviens sur la liste
+je clique sur voir | un form apparait, j'ajoute un commentaire si besoin | je reviens sur la liste
 
-```
+
 le systeme doit purger les alert obsoletes ( date, distance, appreciation )
-```
 
 example : 
 
