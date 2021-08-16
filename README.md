@@ -12,11 +12,12 @@ executer:
 
 ###  je signal un gnome
 
-(1) list gname | (2) form | (3) retour 
+(1) liste gnome | (2) form | (3) retour 
 --| -- | --
-![](./docs/100.PNG) | ![](./docs/120.PNG) | ![](./docs/100.PNG)
+![](./docs/100.PNG) | ![](./docs/110.PNG) | ![](./docs/100.PNG)
 je clique sur add | j'ajoute un commentaire | je reviens sur la liste
 
+    le systeme doit purger les alert obsoletes ( date, distance, appreciation )
 
 ###  je peux apprecier une geololisation : par exemple : si un gnome n'est plus la, je click un bouton j'aime pas
 
