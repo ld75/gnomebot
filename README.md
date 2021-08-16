@@ -21,11 +21,11 @@ je clique sur add | j'ajoute un commentaire | je reviens sur la liste
 le systeme doit purger les alert obsoletes ( date, distance, appreciation )
 ```
 
-    example : 
-    
-    - supprimer les alert de plus de 30 min
-    - trier les alert en dessous de 5 km
-    - virer les alertes qui ont un avis negatif 
+example : 
+
+- supprimer les alert de plus de 30 min
+- trier les alert en dessous de 5 km
+- virer les alertes qui ont un avis negatif 
 
 ###  je peux apprecier une geololisation : par exemple : si un gnome n'est plus la, je click un bouton j'aime pas
 
