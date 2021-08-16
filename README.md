@@ -12,7 +12,11 @@ executer:
 
 ###  je signal un gnome
 
-![](./docs/110.PNG)
+add gnome | list gnome 
+--| --
+![](./docs/100.PNG) | ![](./docs/110.PNG)  
+
+
 
 ###  je consulte la liste des gnomes a proximité
 
