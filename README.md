@@ -17,7 +17,10 @@ executer:
 ![](./docs/100.PNG) | ![](./docs/110.PNG) | ![](./docs/100.PNG)
 je clique sur add | j'ajoute un commentaire | je reviens sur la liste
 
-    le systeme doit purger les alert obsoletes ( date, distance, appreciation )
+```
+le systeme doit purger les alert obsoletes ( date, distance, appreciation )
+```
+
     example : 
     
     - supprimer les alert de plus de 30 min
