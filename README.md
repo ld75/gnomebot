@@ -20,7 +20,9 @@ add gnome | list gnome
 
 ###  je consulte la liste des gnomes a proximité
 
-![](./docs/100.PNG)
+list gname | detail 
+--| --
+![](./docs/100.PNG) | ![](./docs/120.PNG)
 
 ###  je peux apprecier une geololisation : par exemple : si un gnome n'est plus la, je click un bouton j'aime pas
 
