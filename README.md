@@ -12,7 +12,7 @@ executer:
 
 ###  je signal un gnome
 
-list gname | form | retour 
+1. list gname | 2. form | 3. retour 
 --| -- | --
 ![](./docs/100.PNG) | ![](./docs/120.PNG) | ![](./docs/100.PNG)
 je clique sur add | j'ajoute un commentaire | je reviens sur la liste
