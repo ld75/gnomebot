@@ -1,8 +1,9 @@
-export class Gnome {
-    constructor() {
-        this.positiongps;
+class Gnome {
+    constructor(comment, mobility, gpsposition) {
+        this.gpsposition= gpsposition;
+        this.comment=comment;
+        this.mobility=mobility;
     }
-    setPositionGps(positiongps) {
-        this.positiongps=positiongps
-    }
+
 }
+module.exports =  Gnome;

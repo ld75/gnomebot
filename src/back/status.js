@@ -1,3 +1,3 @@
-var status={
-    gnomeList:[]
- }
+
+    module.exports.gnomeList=[]
+

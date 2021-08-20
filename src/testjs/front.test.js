@@ -1,6 +1,6 @@
 import {FrontDisplayer} from "../front/FrontDisplayer.js"
 import {Addgnomepannel} from "../front/webcomponents/addgnomepannel.js";
-
+//TODO: pour l'instant les TU des webcomponents ne marchent pas. A resoudre.
 it('display_add_gnome', function () {
     FrontDisplayer.displayAddGnome()
 
