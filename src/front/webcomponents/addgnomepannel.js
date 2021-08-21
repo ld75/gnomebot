@@ -1,5 +1,5 @@
 import * as utils from "../../utils.js"
-export class Addgnomepannel extends HTMLElement{
+export class AddGnomePannel extends HTMLElement{
     constructor()
     {
         super();
@@ -36,4 +36,4 @@ export class Addgnomepannel extends HTMLElement{
 
         }
 }
-window.customElements.define('add-gnome', Addgnomepannel);
+window.customElements.define('add-gnome', AddGnomePannel);

@@ -5,13 +5,16 @@
     <meta name="theme-color" content="#009688">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./service-worker-init.js"></script>
+    <script type="module" src="./front/webcomponents/menu.js"></script>
     <script type="module">
         import {FrontDisplayer} from "./front/FrontDisplayer.js";
         window.frontDisplayer=FrontDisplayer;
+        import {GpsDetector} from "./front/GpsDetector.js";
+        GpsDetector.activateGps();
     </script>
 </head>
 <body>
-Ajouter un gnome <input type="button" onclick ="frontDisplayer.displayAddGnome()"/>
-<div id="app"></div>
+<menu-gnome></menu-gnome>
+    <div id="app" style="display: grid; place-items: center"></div>
 </body>
 </html>

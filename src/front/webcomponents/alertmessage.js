@@ -88,6 +88,7 @@ export class AlertMessage extends HTMLElement
            appear(message)
            {
                return new Promise((resolve)=>{
+                   console.log(message)
                 if (message!=undefined && this.isMessageExistsInStackMessage(message)==-1)
                 {
                     //let positionIntrinseque=3;

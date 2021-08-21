@@ -1,8 +1,19 @@
-import {Addgnomepannel} from "./webcomponents/addgnomepannel.js";
+import {AddGnomePannel} from "./webcomponents/addgnomepannel.js";
+import {ListGnomePannel} from "./webcomponents/listegnomespannel.js";
 
 export var FrontDisplayer= {
+
+    emptyDisplayApp() {
+     document.body.querySelector("#app").innerHTML="";
+    },
     displayAddGnome() {
-        let addGnomePannel = new Addgnomepannel();
+        this.emptyDisplayApp();
+        let addGnomePannel = new AddGnomePannel();
         document.body.querySelector("#app").appendChild(addGnomePannel)
+    },
+    displayListeGnomes() {
+        this.emptyDisplayApp();
+        let listGnomePannel = new ListGnomePannel();
+        document.body.querySelector("#app").appendChild(listGnomePannel)
     }
 }
