@@ -1,0 +1,22 @@
+GeolocationPosition
+coords: GeolocationCoordinates
+​​
+accuracy: 1000
+​​
+altitude: null
+​​
+altitudeAccuracy: null
+​​
+heading: null
+​​
+latitude: 48.8323
+​​
+longitude: 2.4075
+​​
+speed: null
+​​
+<prototype>: GeolocationCoordinatesPrototype { latitude: Getter, longitude: Getter, altitude: Getter, … }
+​
+timestamp: 1629568913067
+​
+<prototype>: GeolocationPositionPrototype { coords: Getter, timestamp: Getter, … }

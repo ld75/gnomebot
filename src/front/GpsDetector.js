@@ -2,6 +2,7 @@ import * as utils from "../utils.js"
 import {AlertMessage} from "./webcomponents/alertmessage.js";
 
 export var GpsDetector= {
+    gpsPid:null,
     activateGps: function(){
         if (!navigator.geolocation) {
             (new AlertMessage).appear("Votre navigateur ne permet pas d'utiliser la fonctionnalité GPS")
@@ -14,12 +15,21 @@ export var GpsDetector= {
                 maximumAge        : 30000,
                 timeout           : 27000
             };
-            var wpid = navigator.geolocation.watchPosition(this.findMatchingGnomesFromGpsPosition.bind(this), geo_error, geo_options);
+            this.gpsPid = navigator.geolocation.watchPosition(this.findMatchingGnomesFromGpsPosition.bind(this), geo_error, geo_options);
         }
     },
     findMatchingGnomesFromGpsPosition(position) {
-        utils.sendGetAjax("/getMatchingNomesFromGpsPosition?pos="+position,function(){
-            console.log("actualiser gnomes à proximite")
+        if (!frontDisplayer.isListGnomesDisplayed()) return;
+        utils.sendGetAjax("/getMatchingGnomesFromGpsPosition?lat="+position.coords.latitude+"&long="+position.coords.longitude,function(e){
+            if (frontDisplayer.isListGnomesDisplayed()) frontDisplayer.getListGnomesPannel().refresh(e.response)
         })
+    },
+    getCurrentPosition()
+    {
+        return new Promise((resolve,reject)=>{
+            navigator.geolocation.getCurrentPosition(
+                function(position){return resolve(position)}
+            ,function(error){(new AlertMessage()).appear(error); return reject()})
+        });
     }
 }

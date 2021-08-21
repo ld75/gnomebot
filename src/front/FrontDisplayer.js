@@ -15,5 +15,11 @@ export var FrontDisplayer= {
         this.emptyDisplayApp();
         let listGnomePannel = new ListGnomePannel();
         document.body.querySelector("#app").appendChild(listGnomePannel)
+    },
+    isListGnomesDisplayed() {
+        return document.querySelector("list-gnomes")!=undefined
+    },
+    getListGnomesPannel() {
+        return document.querySelector("list-gnomes")
     }
 }

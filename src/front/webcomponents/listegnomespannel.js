@@ -19,6 +19,9 @@ export class ListGnomePannel extends HTMLElement{
 {
 
 }
-
+refresh(listeGnomes)
+{
+    let listeGnomesJson = JSON.parse(listeGnomes)
 }
-window.customElements.define('liste-gnomes', ListGnomePannel);
+}
+window.customElements.define('list-gnomes', ListGnomePannel);

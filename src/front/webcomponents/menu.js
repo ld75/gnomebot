@@ -1,8 +1,10 @@
 import * as utils from "../../utils.js"
+import {FrontDisplayer} from "../FrontDisplayer.js";
 export class MenuGnome extends HTMLElement{
     constructor()
     {
         super();
+        this.frontDisplayer= FrontDisplayer;
         this.attachShadow({mode:'open'});
         var templatehtml = `
 <style>
@@ -25,10 +27,10 @@ justify-content: space-around;
     connectedCallback()
     {
         this.shadowRoot.querySelectorAll("a")[0].addEventListener("click",function(){
-            frontDisplayer.displayListeGnomes()
+            this.frontDisplayer.displayListeGnomes()
         }.bind(this))
         this.shadowRoot.querySelectorAll("a")[1].addEventListener("click",function(){
-            frontDisplayer.displayAddGnome()
+            this.frontDisplayer.displayAddGnome()
         }.bind(this))
     }
 }
