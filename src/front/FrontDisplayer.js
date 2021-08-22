@@ -21,5 +21,8 @@ export var FrontDisplayer= {
     },
     getListGnomesPannel() {
         return document.querySelector("list-gnomes")
+    },
+    displaySee(id) {
+        console.log(id)
     }
 }

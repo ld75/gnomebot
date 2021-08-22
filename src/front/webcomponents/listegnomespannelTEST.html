@@ -1,8 +1,15 @@
 <html>
 <header>
-    <script type="module" src="menu.js"></script>
+    <script type="module" src="listegnomespannel.js"></script>
 </header>
 <body>
-<menu-gnome></menu-gnome>
+<list-gnomes id = "list-gnomes"></list-gnomes>
+<script type="module">
+ import {Gnome} from "../../front/beans/gnome.js"
+let gnome = new Gnome("commentaire","mobilité","123");
+    document.getElementById("list-gnomes").addNewGnome(gnome)
+ let gnome2 = new Gnome("commentaire","mobilité","123");
+ document.getElementById("list-gnomes").addNewGnome(gnome2)
+</script>
 </body>
 </html>

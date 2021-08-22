@@ -7,7 +7,8 @@ export var GpsDetector= {
         if (!navigator.geolocation) {
             (new AlertMessage).appear("Votre navigateur ne permet pas d'utiliser la fonctionnalité GPS")
         } else {
-            function geo_error() {
+            function geo_error(err) {
+                console.log(err)
                 (new AlertMessage).appear("Ce contenu fonctionne avec la localisation GPS. Veuillez activer la localisation GPS et rechargez la page.");
             }
             var geo_options = {
@@ -27,8 +28,9 @@ export var GpsDetector= {
     getCurrentPosition()
     {
         return new Promise((resolve,reject)=>{
+            (new AlertMessage()).appear("Determination position GPS...");
             navigator.geolocation.getCurrentPosition(
-                function(position){return resolve(position)}
+                function(position){(new AlertMessage()).appear("Localisé!"); return resolve(position)}
             ,function(error){(new AlertMessage()).appear(error); return reject()})
         });
     }

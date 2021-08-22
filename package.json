@@ -15,7 +15,8 @@
     "jest": "^27.0.6",
     "jest-electron": "^0.1.11",
     "jest-environment-jsdom-fifteen": "^1.0.2",
-    "jest-puppeteer": "^5.0.4"
+    "jest-puppeteer": "^5.0.4",
+    "shortid": "^2.2.16"
   },
   "dependencies": {
     "express": "^4.17.1"

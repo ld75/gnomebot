@@ -31,7 +31,9 @@ app.get('/getMatchingGnomesFromGpsPosition', function(req, res) {
     res.end();
 })
 app.post('/addgnome', function(req, res) {
+    console.log("lauren1")
     let form = new formidable.IncomingForm();
+    console.log("lauren1")
     form.parse(req, function(err, fields, files) {
         if (err) {
             console.error(err.message);
@@ -41,7 +43,11 @@ app.post('/addgnome', function(req, res) {
         let mobilite=fields.mobilite
         let gps=fields.gps
         try {
+            console.log("lauren1")
             service.addAGnome(commentaire, mobilite, gps)
+            console.log("laurent4")
+            res.statusCode=200;
+            res.end();
         }
         catch(err)
         {
@@ -50,7 +56,7 @@ app.post('/addgnome', function(req, res) {
             res.write(err.message)
             res.end();
         }
-        res.statusCode=200;
+
     });
 })
 

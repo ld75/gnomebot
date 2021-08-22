@@ -14,7 +14,7 @@ export class AddGnomePannel extends HTMLElement{
         <tr><td><input type="radio" value="fixe" name="mobilite"></td><td>Gnome fixe</td></tr>
         <tr><td><input type="radio" value="mobile" name="mobilite"></td><td>Gnome mobile</td></tr>
         <tr><td colspan="2">Commentaires</td> </tr>          
-        <tr><td colspan="2"><input type="textarea" name="commentaires"></td> </tr>          
+        <tr><td colspan="2"><input type="textarea" name="commentaire"></td> </tr>          
         <tr><td colspan="2"><input type="button" value="Valider"></td> </tr>          
           </table>
         
@@ -38,6 +38,7 @@ export class AddGnomePannel extends HTMLElement{
         let formData = new FormData(this.shadowRoot.querySelector("form"))
         try{
         let position = await this.gpsDetector.getCurrentPosition()
+            console.log(position)
         formData.append("gps",position.coords.latitude+" "+position.coords.longitude);
         utils.sendajax(formData, "./addgnome", null,null,null,
             function(e){
