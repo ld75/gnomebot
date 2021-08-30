@@ -30,6 +30,14 @@ app.get('/getMatchingGnomesFromGpsPosition', function(req, res) {
     res.write(JSON.stringify(service.getNearbyGnomes(latitude,longitude)))
     res.end();
 })
+app.get('/getgnomeinfobyid', function(req, res) {
+    let gnomeId= req.id;
+    service.getGnomeInfosById(gnomeId);
+    res.statusCode=200;
+    res.contentType("application/json")
+    res.write(JSON.stringify(service.getNearbyGnomes(latitude,longitude)))
+    res.end();
+})
 app.post('/addgnome', function(req, res) {
     console.log("lauren1")
     let form = new formidable.IncomingForm();

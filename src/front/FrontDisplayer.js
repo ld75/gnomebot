@@ -23,6 +23,9 @@ export var FrontDisplayer= {
         return document.querySelector("list-gnomes")
     },
     displaySee(id) {
-        console.log(id)
+        this.emptyDisplayApp();
+        let viewGnome = new ViewGnomePannel()
+        document.body.querySelector("#app").append(viewGnome)
+        viewGnome.setAttribute("gnomeid",id);
     }
 }

@@ -64,17 +64,6 @@ export function sendGetAjax(url,callbackwhenload) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET",url, true);
     xhr.onload = callbackwhenload;
-
-
-    xhr.onload = function(event) {
-        if (xhr.status == 200)
-        {
-            if  (isDefined(callbackwhenload)){
-                let methcallbackwhendone= callbackwhenload.bind(this);
-                methcallbackwhendone(xhr)
-            }
-        }
-    }.bind(xhr);
     xhr.send();
 }
 export function hashCode(unstring) {
